@@ -1,0 +1,52 @@
+<!-- Write an html that is accepting a date of joining give a range using html
+    validation , make it compulsary
+    3.
+    Add a text field to describe the job give minlength an max length
+    Submit the form if the validations are false show messages
+    If validations are OK then go to welcome.html -->
+    
+    <html>
+        <script>
+            function validate()
+            {
+                let n=document.getElementById("i1")
+             
+                let e=document.getElementById("i2")
+               // console.log(e)
+                let d=document.getElementById("i3")
+                let j=document.getElementById("i4")
+                
+                if(n.checkValidity() && e.checkValidity() && d.checkValidity() && j.checkValidity())
+                     {
+                            
+                        alert("Submitted")
+                         
+                     }
+                    }
+    
+            
+        </script>
+    
+        <body>
+            <center>
+                <form action="C:\Users\IET\Desktop\HTML\9 May\tablejquery.html">
+
+           Name: <input id="i1" type="text"  minlength="2" maxlength="20"/>
+            <br>
+            <br>
+            Email: <input type="email" id="i2"  required  minlength="3" maxlength="20" />
+            <br> <br>
+            Designation:<input id="i3" type="text" required minlength="3" maxlength="10"/>
+            <br> <br>
+            Date of Joining:<input id="i4" type="date" min="2023-03-01" max="2023-12-04" required />
+            <br> <br>
+            <input type="submit" onclick="validate()" value="Submit" /> </form>
+    
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+       
+            </center>
+        </body>
+    </html>

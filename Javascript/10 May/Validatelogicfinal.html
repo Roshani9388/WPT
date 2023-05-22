@@ -1,0 +1,88 @@
+<!-- Write a registration form in an html
+Validate the name as non empty, non numeric and length >2
+Validate the dob such that the age is not less than 18 age is not > 100
+Validate the email such that it has @ and dot
+Validate the address such that it has a string "pune"
+On successfult submit go to welcome.html -->
+
+<html>
+<script>
+    function validate() {
+        let namev, emailv,addv
+        let n = document.forms.f1.i1.value
+       // document.forms.f1.i1.focus()
+       // console.log(!isNaN(n))
+
+        if (n.trim() == "" || n.length < 2 ||  !isNaN(n)) {
+            alert("Enter valid value in name field....")
+            
+
+            namev = false
+        }
+
+        else
+            namev = true
+
+        //Validate the email such that it has @ and dot
+
+        let e = document.forms.f1.i2.value
+        if (e.trim() == "") {
+            alert("Enter valid email address")
+            emailv = false
+        }
+        else {
+            emailv = true
+        }
+
+
+        let a = document.forms.f1.i3.value
+        if(a<18 || a>100)
+            {
+                alert("Enter valid age")
+                agev=false
+            }
+            else
+                agev=true
+
+
+            let add=document.forms.f1.i4.value
+
+               // console.log(add)
+            if(((add.indexOf("Pune"))<0) && (add.indexOf("pune"))<0 && (add.indexOf("PUNE"))<0)
+            {
+                alert("Applicable for pune residants")
+                addv=false
+            }
+            else {
+                addv = true
+            }
+
+            return namev && emailv && agev && addv
+      }
+</script>
+
+
+<body>
+    <center>
+        <label
+            style="font:bold ;color:mediumvioletred ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;">
+            ******** REGISTATION FORM ********</label>
+        <form id="f1" action="C:\Users\IET\Desktop\HTML\9 May\animated.html"
+            style="height:400px ;width:500px; margin-top:50px ; border: solid crimson; ">
+            <br>
+            <br>
+            Name: <input type="text" id="i1"   pattern="[A-Za-z]{1,}"/>
+            <br><br>
+            Email: <input type="email" id="i2" />
+            <br><br>
+            age:<input type="number" id="i3" />
+            <br><br>
+            Address:<input type="text" id="i4" />
+            <br><br>
+            <br><br>
+            <input type="submit" onclick="return validate()">
+        </form>
+    </center>
+</body>
+
+</html>
