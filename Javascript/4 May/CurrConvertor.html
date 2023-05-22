@@ -1,0 +1,72 @@
+<!-- 
+currency_convertor.html
+
+Textfield , dropdown for FROM and TO
+
+Rupee , dollar, euro To = rupee dollar euro -->
+
+<html>
+    <script>
+    function f1()
+    {
+        let n1=document.getElementById("i1").value
+        console.log(n1)
+        if(document.getElementById("s1").value=="Rupees" && document.getElementById("s2").value=="Rupees")
+        {
+            //console.log(document.getElementById("o1").value)
+                document.getElementById("p1").innerText=n1
+        }
+
+        else if(document.getElementById("s1").value=="Rupees" && document.getElementById("s2").value=="Dollars")
+        {
+            console.log(n1)
+            let d=parseInt(parseInt(n1)/81)
+            console.log(d)
+            document.getElementById("p1").innerText=d
+        }
+
+        else if(document.getElementById("s1").value=="Rupees" && document.getElementById("s2").value=="Euros")
+        {
+            console.log(n1)
+            let d=parseInt(n1)*0.011
+            console.log(d)
+            document.getElementById("p1").innerText=d
+        }
+    }
+    </script>
+<center>
+<body>
+    Enter Number : <input type="number" id="i1"/>
+    
+
+  <select id="s1">
+      <option  value="Rupees">Rupees</option>
+      <option value="Dollars">Dollars</option>
+      <option  value="Euros">Euros</option>
+    </select>
+<br>
+<br>
+<hr>
+<br>
+   
+    <select id="s2">
+            <option id="o4" value="Rupees">Rupees</option>
+            <option id="o5" value="Dollars">Dollars</option>
+            <option id="o6" value="Euros">Euros</option>
+          </select>
+<br>
+<br>
+    <input type="button" id="b1" value="  Result  " onclick="f1()"/>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    Converted Value :
+  
+    <p id="p1"></p>
+        </center>
+</body>
+
+</html>

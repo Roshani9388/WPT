@@ -1,0 +1,33 @@
+<!-- Accept a birthdate from the user and show the age in <p> -->
+
+<html>
+        <center>
+    <head>
+       
+        <script>
+                function f1()
+                {  
+                  
+                    var a=document.getElementById("i1").value;
+                    var d=new Date(a)
+                    let c=new Date()
+                    let diff=c-d
+                    year=(diff/(24*60*60*1000)/365)
+                    let c1=document.getElementById("p1");
+                    c1.innerText=parseInt(year);
+                    console.log(c)
+                    console.log(d)
+                    console.log(diff)
+                    console.log(year)
+
+                  
+                }
+        </script>
+    </head>
+    <body>
+        <input type="date" id="i1"/>
+        <button type="submit" onclick="f1()">AGE</button>
+        <p id="p1" ></p>
+    </body>
+</center>
+</html>

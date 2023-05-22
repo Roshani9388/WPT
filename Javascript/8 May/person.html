@@ -1,0 +1,29 @@
+<!-- // 5. try out the array example to push Person details in array and show all person
+// names on button click as discussed in class -->
+
+<html>
+    
+        <script>
+             let obj={pername:"Roshani",age:29}
+             console.log(obj.pername,obj.age)
+            function f1()
+            {
+                    let arr=[]
+                    let e=document.getElementById("b1");
+                    console.log(e)
+                     arr.push({pername:"abc",age:25})
+                     arr.push({pername:"xyz",age:47})
+                     arr.push({pername:"rcb",age:25})
+                     console.log(arr)
+                     
+            }
+
+        </script>
+
+    <body>
+            <input type="button" onclick="f1()" id="b1" value="showDetails"/>
+            <p id="p1">Details</p>
+
+
+    </body>
+</html>

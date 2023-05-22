@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+        <script>
+            $().ready(function()
+            {
+                $("#b1").click(function () 
+                {
+                    let x=$("#i1").val()
+                    $("#p1").text(x)
+                })
+
+                $("#b2").click(function () 
+                {
+                    $("#p1").text("")
+                })
+            })
+        </script>
+    </head>
+    <body>
+         <input type="text" id="i1"/>
+        <input type="button" value="ok" id="b1"/>
+        <input type="button" value="clear" id="b2"/>
+        <p id="p1"></p>
+    </body>
+</html>

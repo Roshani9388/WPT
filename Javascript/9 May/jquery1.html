@@ -1,0 +1,30 @@
+
+<html>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        $().ready(function()
+            {
+                $("#b1").click(function () 
+                {
+                     $("#p1").text("Hello")
+                     $("#p2").html("<i>Hello</i>")
+                     $("#p3").html("<u>Hello</u>")
+
+                 })
+      })
+    </script>
+
+    <body>
+       <center>
+        <p id="p1" value="">Normal Text:</p>
+        <br>
+        <p id="p2">Italic:</p>
+        <br>
+        <p id="p3">Underline:</p>
+        <br>
+        <br>
+
+        <input  type="button" id="b1" value="STYLES"/>
+    </center>
+    </body>
+</html>

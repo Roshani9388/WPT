@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+        <script>
+            $().ready(function()
+            {
+                $("table").hide();
+                $("#b1").click(function () 
+                {
+                   
+                    $("table").show();
+                    let n=$("#i1").val()
+                    let up=$("#i2").val()
+
+                    $("table").empty();
+                    if(n>0 && up>0)
+                    {
+                         $("table").append(`<tr><th>calc</th><th>res</th></tr>`)
+                        for(i=1;i<=up;i++)
+                    {
+                        let t=n*i;
+                         $("table").append(`<tr><td>${n}*${i}</td><td>${t}</td></tr>`);
+                       
+                    }
+                }
+                else
+                alert("Enter valid values")
+
+                  
+                })
+            })
+        </script>
+    </head>
+    <body>
+        Number:
+         <input type="number" id="i1"/>
+         Upto:
+         <input type="number" id="i2" />
+        <input type="button" value="Show Table" id="b1"/>
+        <!-- <p id="p1" value="ptag"> -->
+            <table border="1" border="border-collaps">
+                
+                
+                    
+                    <!-- <td></td>
+                    <td></td> -->
+                    </tr>
+                </table>
+            </table>
+        </p>
+    </body>
+</html>

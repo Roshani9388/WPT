@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+        <script>
+        $().ready(function()
+            {
+                $("#b1").click(function () 
+                {
+                   
+                         $("#d1").animate({right: '10px'},"slow")
+                        $("#d1").animate({left: '10px'},"slow")
+
+                        $("#d1").animate({right: '600px'},"slow")
+                        $("#d1").animate({left: '600px'},"slow")
+
+                        $("#d1").animate({left: '10px'},"slow")
+
+                        $("#d1").animate({right: '600px'},"slow")
+                        $("#d1").animate({left: '600px'},"slow")
+
+                        $("#d1").animate({left: '10px'},"slow")
+
+                        $("#d1").animate({right: '600px'},"slow")
+                        $("#d1").animate({left: '600px'},"slow")
+
+                        $("#d1").animate({left: '10px'},"slow")
+                        
+                        var div = $("#d1");
+                        div.animate({width: '400px'}, "slow");
+
+                        var div = $("#d1");
+                        div.animate( "slow",()=>{ alert("click button to do again")});
+                       
+             })
+      })
+    </script>
+    </head>
+
+        <body>
+            <div id="d1" style="position:absolute; border:5px double crimson;size-adjust:fitcontent;background-color: blueviolet; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 40PX;text-align: center;width:400px" >Friends 'till the end.</div>
+            <center>
+            <BR>
+                <BR>
+                    <br>
+                    <BR>
+                        <BR>
+                            <br>
+
+            <input type="button" id="b1" value="SLIDE TO MOVE" style="color:rgb(236, 5, 140) ; font-style:italic;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style:normal; background-color: chartreuse; size: 50px;" />
+        </center>
+        </body>
+</html>

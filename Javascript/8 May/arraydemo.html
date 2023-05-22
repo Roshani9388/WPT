@@ -1,0 +1,35 @@
+<!-- // 5. try out the array example to push Person details in array and show all person
+// names on button click as discussed in class -->
+
+<html>
+    
+        <script>
+             
+             
+            function f1()
+            {
+                let obj=[{fn:"banana",cost:20},{fn:"apple"},{fn:"pineapple"}]
+                for(let i=0;i<obj.length;i++)
+                {
+                    c2=obj[i].fn.concat(obj[i].cost," ")
+                    c1=document.getElementById("p1").innerText
+                    document.getElementById("p1").innerText= c1.concat(c2," ")
+               // document.getElementById("p1").innerText=  document.getElementById("p1").innerText+" "+obj[i].fn+","+obj[i].cost;
+                console.log(obj[i])
+                }
+
+                //document.getElementById("p1").innerText=obj[0].cost;
+            }
+
+        </script>
+
+    <body>
+            <br>
+            <input type="button" onclick="f1()" id="b1" value="showDetails"/>
+            <br>
+            <p id="p1">Details:           </p>
+            <br>
+
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+        <script>
+            $().ready(function()
+            {
+                $("#b1").click(function () 
+                {
+                    let x=$("#i1").val()
+                    let fact=1
+                    for(let i=1;i<=x;i++)
+                    {
+                            fact=fact*i
+                    }
+                    $("#p1").text(fact)
+                })
+
+                $("#b2").click(function () 
+                {
+                    $("#p1").text("")
+                })
+            })
+        </script>
+    </head>
+    <body>
+         <input type="number" id="i1"/>
+        <input type="button" value="Show Factorial" id="b1"/>
+        <p id="p1"></p>
+    </body>
+</html>

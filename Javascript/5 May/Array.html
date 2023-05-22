@@ -1,0 +1,81 @@
+<!-- Show a textfield - accept a value
+Check if the value is present in the array --- display found or not 
+found in a <p> tag 
+Show a button add-to-end } if this button is clicked then 
+append in the array
+Show a button insert-at-index , tf to accept index 
+On click insert the value at that index and show the final array 
+in another <p> tag 
+Show a button remove tf to accept index
+Remove that element and show final array in another <p> -->
+
+<html>
+    <head>
+            <script>
+
+                var arr=[]
+                function append()
+                {
+                    var a=document.getElementById("i1").value;
+                    arr.push(a);
+                    let c=document.getElementById("p2");
+                    c.innerText=arr;
+                }
+
+               function insertatIndex()
+               {
+                  var a=document.getElementById("i1").value;
+                  var i=document.getElementById("i2").value;
+                  arr.splice(i,0,a);
+                  let c=document.getElementById("p2");
+                 c.innerText=arr;
+               }
+
+               function remove()
+               {
+                var a=document.getElementById("i1").value;
+                var i=document.getElementById("i2").value;
+                    arr.splice(i,1);
+                    let c=document.getElementById("p3");
+                    c.innerText=arr;
+               }
+
+                function find1()
+                {
+                    var a=document.getElementById("i1").value;
+                    let v=arr.indexOf(a)
+                    if(v<0)
+                    {
+                         let c=document.getElementById("p1");
+                         c.innerText="Number is not Present";
+                    }
+                    else
+                    {
+                        let c=document.getElementById("p1");
+                        c.innerText="Number is  Present";
+                    }
+
+                }
+
+            </script>
+
+    </head>
+
+        <body>
+                <pre>
+                        <input type="text" id="i1" value="Enter Value"/>
+                        <input type="text" id="i2" value="Enter index" />
+
+                        <p id="p1">Found or Not</p>
+                        <p id="p2">Final Array</p>
+                        <p id="p3">Final Array after Removing element</p>
+                </pre>
+           <div>
+                  <button onclick="append()">Append</button>
+                 <button onclick="insertatIndex()">Insert at Index</button>
+                <button onclick="remove()">Remove</button>
+                <button onclick="find1()">Found or Not</button>
+         </div>
+        </body> 
+   
+</html>

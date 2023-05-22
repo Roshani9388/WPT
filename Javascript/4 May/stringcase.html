@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+        function upper()
+        {
+            let e=document.getElementById("i1");
+             let v=e.value
+            let c=document.getElementById("p1");
+             c.innerText=v.toUpperCase();
+        }    
+
+        function lower()
+        {
+            let e=document.getElementById("i1");
+             let v=e.value
+            let c=document.getElementById("p1");
+             c.innerText=v.toLowerCase();
+        }    
+
+        function title1()
+        {
+            
+            let element=document.getElementById("i1").value
+             let s1=element.charAt(0).toUpperCase()
+             let s2=element.subStr(1).toLowerCase()
+             let result=s1.concat(s2)
+              let e=document.getElementById("p1")
+            e.innerText=result
+
+        
+        }    
+
+    </script>
+</head>
+
+<body>
+   
+        <pre>
+                enter string:  <input type="text" id="i1" />
+                <p id="p1"></p>
+        </pre>
+   <div>
+          <button onclick="upper()">UPPERCASE</button>
+         <button onclick="lower()">LOWERCASE</button>
+        <button onclick="title1()">TITLECASE</button>
+ </div>
+   
+</body>
+</html>
+

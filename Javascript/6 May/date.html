@@ -1,0 +1,60 @@
+<!-- Accept a date from the user and show the day on that date in words in a <p>  -->
+<!-- tag -->
+
+<html>
+    <head>
+        <script>
+                function f1()
+                {  
+                  
+                    var a=document.getElementById("i1").value;
+                    var d=new Date(a)
+                    var r=d.getDay();
+                    switch(r)
+                    {
+                        case 0:
+                        let c=document.getElementById("p1");
+                        c.innerText="SUNDAY";
+                        break
+
+                        case 1:
+                        let c1=document.getElementById("p1");
+                        c1.innerText="MONDAY";
+                        break
+
+                        case 2:
+                        let c2=document.getElementById("p1");
+                        c2.innerText="TUESDAY";
+                        break
+
+                        case 3:
+                        let c3=document.getElementById("p1");
+                        c3.innerText="WEDNESDAY";
+                        break
+
+                        case 4:
+                        let c4=document.getElementById("p1");
+                        c4.innerText="THURSDAY";
+                        break
+
+                        case 5:
+                        let c5=document.getElementById("p1");
+                        c5.innerText="FRIDAY";
+                        break
+
+                        case 6:
+                        let c6=document.getElementById("p1");
+                        c6.innerText="SATURDAY";
+                        break
+                     }
+                    console.log(r)
+                  
+                }
+        </script>
+    </head>
+    <body>
+        <input type="date" id="i1"/>
+        <button type="submit" onclick="f1()">DAYINWORDS</button>
+        <p id="p1" ></p>
+    </body>
+</html>
